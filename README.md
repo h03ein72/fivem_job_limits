@@ -24,3 +24,7 @@ ESX.TriggerServerCallback('job72_handler:getTimers', function(isExpired)
 
 end, ESX.PlayerData.job.name)
 ```
+
+Then use these commands to set or delete the timers:
+    /rtjob
+    /rdjob
