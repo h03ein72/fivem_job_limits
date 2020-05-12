@@ -26,5 +26,5 @@ end, ESX.PlayerData.job.name)
 ```
 
 Then use these commands to set or delete the timers:
-    /rtjob
-    /rdjob
+   - /rtjob
+   - /rdjob
