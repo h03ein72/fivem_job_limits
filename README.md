@@ -7,7 +7,7 @@ This is a simple FiveM-Script for those whom need a limiter for jobs.
 - ES-Extended | [GitHub](https://github.com/ESX-Org/es_extended)
 
 ## Installation
-Just use this for set check limiter
+Just use this to set a checker
 
 ```
 ESX.TriggerServerCallback('job72_handler:getTimers', function(isExpired)
