@@ -1,5 +1,5 @@
 ESX = nil
-TriggerEvent('hos:getSharedObject', function(obj) ESX = obj end)
+TriggerEvent('esx:getSharedObject', function(obj) ESX = obj end)
 
 RegisterServerEvent("job72_handler:setTime")
 AddEventHandler("job72_handler:setTime", function(source, job_name, time)
@@ -31,9 +31,9 @@ AddEventHandler("job72_handler:setTime", function(source, job_name, time)
 			end	
 		end
 		if not time then
-			TriggerClientEvent('hos:showNotification', source, "~g~Ba movafaghiat ~b~".. job_name .." ~g~be moddat ~b~Unlimited ~g~sabt shod.")
+			TriggerClientEvent('esx:showNotification', source, "~g~Ba movafaghiat ~b~".. job_name .." ~g~be moddat ~b~Unlimited ~g~sabt shod.")
 		else
-			TriggerClientEvent('hos:showNotification', source, "~g~Ba movafaghiat ~b~".. job_name .." ~g~be moddat ~b~".. time .." ~g~ruz sabt shod.")
+			TriggerClientEvent('esx:showNotification', source, "~g~Ba movafaghiat ~b~".. job_name .." ~g~be moddat ~b~".. time .." ~g~ruz sabt shod.")
 		end
 	end)
 end)
@@ -47,9 +47,9 @@ AddEventHandler("job72_handler:removeTime", function(source, job_name)
 			exports.ghmattimysql:execute("DELETE FROM `job72_handler` WHERE job_name = @job_name", {
 				['@job_name'] = tostring(job_name)
 			})
-			TriggerClientEvent('hos:showNotification', source, "~g~Ba movafaghiat ~b~".. job_name .." ~r~hazf ~g~shod.")
+			TriggerClientEvent('esx:showNotification', source, "~g~Ba movafaghiat ~b~".. job_name .." ~r~hazf ~g~shod.")
 		else
-			TriggerClientEvent('hos:showNotification', source, "~r~Timer sabt nashode ast.")
+			TriggerClientEvent('esx:showNotification', source, "~r~Timer sabt nashode ast.")
 		end
 	end)
 end)
@@ -62,7 +62,7 @@ AddEventHandler("job72_handler:getJobs", function(source, job_name, time)
 		if result[1] then
 			TriggerEvent('job72_handler:setTime', source, tostring(job_name), time)
 		else
-			TriggerClientEvent('hos:showNotification', source, "~r~Job yaft nashod.")
+			TriggerClientEvent('esx:showNotification', source, "~r~Job yaft nashod.")
 		end
 	end)
 end)
